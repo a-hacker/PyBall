@@ -1,8 +1,8 @@
 import pytest
 from PyBall import PyBall
-from models.people import People
+from PyBall.models import Person
 
-from exceptions import *
+from PyBall.exceptions import InvalidIdError, BadRequestError
 
 
 @pytest.fixture(scope='module')
@@ -12,7 +12,7 @@ def test_player():
 
 
 def test_get_player_endpoint_returns_player(test_player):
-    assert isinstance(test_player, People)
+    assert isinstance(test_player, Person)
 
 
 def test_bad_player_id():

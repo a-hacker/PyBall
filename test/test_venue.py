@@ -1,8 +1,8 @@
 import pytest
 from PyBall import PyBall
-from models.venue import Venue
+from PyBall.models import Venue
 
-from exceptions import *
+from PyBall.exceptions import BadRequestError, InvalidIdError
 
 
 @pytest.fixture(scope='module')
